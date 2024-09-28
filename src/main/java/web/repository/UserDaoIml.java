@@ -28,11 +28,6 @@ public class UserDaoIml implements UserDao {
         entityManager.createNativeQuery(sql).executeUpdate();
     }
 
-    @Override
-    public void dropUsersTable() {
-        String sql = "DROP TABLE IF EXISTS user";
-        entityManager.createNativeQuery(sql).executeUpdate();
-    }
 
     @Override
     public void createUser(User user) {

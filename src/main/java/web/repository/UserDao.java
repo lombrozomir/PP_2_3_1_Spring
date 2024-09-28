@@ -8,7 +8,6 @@ public interface UserDao {
 
 
     void createUsersTable();
-    void dropUsersTable();
     void createUser(User user);
     List<User> getAllUsers();
     void updateUser(User user);

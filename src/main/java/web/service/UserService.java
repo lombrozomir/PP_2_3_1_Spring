@@ -11,7 +11,6 @@ public interface UserService {
 
     void createUsersTable();
 
-    void dropUsersTable();
 
     void createUser(User user);
 

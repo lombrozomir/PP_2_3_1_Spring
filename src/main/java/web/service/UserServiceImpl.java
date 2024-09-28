@@ -24,12 +24,6 @@ public class UserServiceImpl implements UserService {
 
     @Transactional
     @Override
-    public void dropUsersTable() {
-        userDao.dropUsersTable();
-    }
-
-    @Transactional
-    @Override
     public void createUser(User user) {
         userDao.createUser(user);
     }
