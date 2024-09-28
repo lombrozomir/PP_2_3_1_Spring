@@ -1,0 +1,32 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Редактирование пользователя</title>
+</head>
+<body>
+<h1>Редактирование пользователя</h1>
+<form action="#" th:action="@{/editUser}" th:object="${user}" method="post">
+    <div>
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" required/>
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required/>
+    </div>
+    <div>
+        <label for="age">Возраст:</label>
+        <input type="number" id="age" name="age" required/>
+    </div>
+    <input type="hidden" th:field="*{id}"/>
+    <div>
+        <button type="submit">Сохранить</button>
+    </div>
+</form>
+<a href="/users">Назад к списку пользователей</a>
+</body>
+</html>
